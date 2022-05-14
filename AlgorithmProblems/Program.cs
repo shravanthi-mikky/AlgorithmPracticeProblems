@@ -35,6 +35,10 @@ while (true)
                 Console.WriteLine("Element found at "+ "index " + result);
             Console.WriteLine(result);
             break;
+        case 3:
+            PrimeNumbers p1 = new();
+            p1.Prime_Number();
+            break;
         default:
             Console.WriteLine("Please choose the correct ");
             break;
