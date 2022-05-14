@@ -4,7 +4,7 @@ using AlgorithmProblems;
 Console.WriteLine("Algorithm Practice Problems!");
 while (true)
 {
-    Console.WriteLine("Please choose the option :\n1) Anagram \n2) Binary Search\n3)Prime Numbers Between 0 and 1000\n4)Bubble Sort");
+    Console.WriteLine("Please choose the option :\n1) Anagram \n2) Binary Search\n3) Prime Numbers Between 0 and 1000\n4) Bubble Sort\n5) Insertion Sort");
     int option = Convert.ToInt32(Console.ReadLine());
     switch (option)
     {
@@ -13,15 +13,10 @@ while (true)
             Console.WriteLine("Please enter the two strings to find if they are anagrams or not. :");
             string first = Console.ReadLine();
             string second = Console.ReadLine();
-
             if (anagram.AnagramDetector(first, second))
-            {
                 Console.WriteLine("Given words are Anagrams!");
-            }
             else
-            {
                 Console.WriteLine("No! Given words are not Anagrams!");
-            }
             break;
         case 2:
             BinarySearch bs = new();
@@ -42,6 +37,10 @@ while (true)
         case 4:
             BubbleSort bubbleSort = new BubbleSort();
             bubbleSort.Bubble_Sort();
+            break;
+        case 5:
+            InsertionSort sort = new();
+            sort.Insertion_Sort();
             break;
         default:
             Console.WriteLine("Please choose the correct ");
