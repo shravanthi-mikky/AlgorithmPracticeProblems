@@ -8,7 +8,6 @@ namespace AlgorithmProblems
 {
     public class BubbleSort
     {
-       
         public void Bubble_Sort()
         {
             List<int> list = new List<int>() { 5, 2, 6, 9, 1 };

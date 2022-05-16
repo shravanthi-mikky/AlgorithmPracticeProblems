@@ -4,7 +4,7 @@ using AlgorithmProblems;
 Console.WriteLine("Algorithm Practice Problems!");
 while (true)
 {
-    Console.WriteLine("Please choose the option :\n1) Anagram \n2) Binary Search\n3) Prime Numbers Between 0 and 1000\n4) Bubble Sort\n5) Insertion Sort");
+    Console.WriteLine("Please choose the option :\n1) Anagram \n2) Binary Search\n3) Prime Numbers Between 0 and 1000\n4) Bubble Sort\n5) Insertion Sort\n6) Merge Sort");
     int option = Convert.ToInt32(Console.ReadLine());
     switch (option)
     {
@@ -41,6 +41,24 @@ while (true)
         case 5:
             InsertionSort sort = new();
             sort.Insertion_Sort();
+            break;
+        case 6:
+            MergeSort merge = new MergeSort();
+            int n = 8;
+            int[] array = { 49, 3, 53, 21, 27, 75, 50, 41 };
+            Console.WriteLine("Merge Sort");
+            Console.Write("Initial array is: ");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(array[i] + " ");
+            }
+            merge.MergeSort1(array, 0, n - 1);
+            Console.Write("\nSorted Array is: ");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(array[i] + " ");
+            }
+            Console.WriteLine();
             break;
         default:
             Console.WriteLine("Please choose the correct ");
