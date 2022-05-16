@@ -4,7 +4,7 @@ using AlgorithmProblems;
 Console.WriteLine("Algorithm Practice Problems!");
 while (true)
 {
-    Console.WriteLine("Please choose the option :\n1) Anagram \n2) Binary Search\n3) Prime Numbers Between 0 and 1000\n4) Bubble Sort\n5) Insertion Sort\n6) Merge Sort\n7) Guess the Number");
+    Console.WriteLine("Please choose the option :\n1) Anagram \n2) Binary Search\n3) Prime Numbers Between 0 and 1000\n4) Bubble Sort\n5) Insertion Sort\n6) Merge Sort\n7) Guess the Number\n8) Binary Search Using Generics");
     int option = Convert.ToInt32(Console.ReadLine());
     switch (option)
     {
@@ -63,6 +63,18 @@ while (true)
         case 7:
             GuessNumber g1 = new();
              g1.Guess();
+            break;
+        case 8:
+            BinarySearchUsingGenerics<int> bs1 = new();
+            int[] arr1 = { 10,20,35,40,51,65,78};
+            Console.WriteLine("Please enter a number to be searched :");
+            int key1 = Convert.ToInt16(Console.ReadLine());
+            int result1 = bs1.binary_search_iterative(arr1, key1);
+            if (result1 == -1)
+                Console.WriteLine("Element not present");
+            else
+                Console.WriteLine("Element found at " + "index " + result1);
+            Console.WriteLine(result1);
             break;
         default:
             Console.WriteLine("Please choose the correct ");
