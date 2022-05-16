@@ -4,7 +4,7 @@ using AlgorithmProblems;
 Console.WriteLine("Algorithm Practice Problems!");
 while (true)
 {
-    Console.WriteLine("Please choose the option :\n1) Anagram \n2) Binary Search\n3) Prime Numbers Between 0 and 1000\n4) Bubble Sort\n5) Insertion Sort\n6) Merge Sort");
+    Console.WriteLine("Please choose the option :\n1) Anagram \n2) Binary Search\n3) Prime Numbers Between 0 and 1000\n4) Bubble Sort\n5) Insertion Sort\n6) Merge Sort\n7) Guess the Number");
     int option = Convert.ToInt32(Console.ReadLine());
     switch (option)
     {
@@ -59,6 +59,10 @@ while (true)
                 Console.Write(array[i] + " ");
             }
             Console.WriteLine();
+            break;
+        case 7:
+            GuessNumber g1 = new();
+             g1.Guess();
             break;
         default:
             Console.WriteLine("Please choose the correct ");
